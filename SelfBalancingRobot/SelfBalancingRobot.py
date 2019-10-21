@@ -69,7 +69,7 @@ A = np.array([[0,0,1,0],[0,0,0,1],[EG[0][0], EG[0][1], FG[0][0], FG[0][1]],[EG[1
 EH = np.dot(Einv, H)
 B = np.array([[0],[0],[EH[0][0]],[EH[1][0]]])
 
-#ランダムに配置を探索
+#ランダムに条件を満たす配置を探索
 while True:
 	n1 = -random.uniform(0,50)
 	n2 = -random.uniform(0,50)
@@ -143,3 +143,5 @@ with open("./Result/Variables.txt", 'w') as f:
 	f.write("n3 : " + str(n3) + "\r\n")
 	f.write("j1 : " + str(j1) + "\r\n")
 	f.write("j2 : " + str(j2) + "\r\n")
+	f.write("Fx : " + str(Fx) + "\r\n")
+	f.write("l  : " + str(l) + "\r\n")
